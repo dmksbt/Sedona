@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 10px;
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  word-wrap: break-word;
+  color: @white;
+  background-color: @blue;
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: fade(@white, 30%);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}

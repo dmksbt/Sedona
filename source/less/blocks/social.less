@@ -1,0 +1,41 @@
+.social {
+  .list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.social__item {
+  margin-bottom: 6px;
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 46px;
+  height: 48px;
+  background-color: @blue;
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social__icon {
+  fill: @white;
+
+  .social__link:active & {
+    fill-opacity: 0.3;
+  }
+}

@@ -1,0 +1,103 @@
+.fiatures {
+  .list-reset();
+  margin: 0 auto;
+  width: 320px;
+  padding: 35px 20px 6px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.fiatures__item {
+  text-align: left;
+  padding-left: 50px;
+  margin-bottom: 28px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 160px 4% 61px;
+    text-align: center;
+    width: 33.3333%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 82px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 57px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--house::before {
+    background-image: url("../img/icon-house.svg");
+    background-size: 39px 37px;
+
+    @media (min-width: @tablet-width) {
+      background-size: 75px 72px;
+    }
+  }
+
+  &--gift {
+    @media (min-width: @tablet-width) {
+      order: 1;
+    }
+  }
+
+  &--gift::before {
+    background-image: url("../img/icon-gift.svg");
+    background-size: 32px 38px;
+
+    @media (min-width: @tablet-width) {
+      background-size: 76px 68px;
+    }
+  }
+
+  &--food::before {
+    background-image: url("../img/icon-burger.svg");
+    background-size: 40px 35px;
+
+    @media (min-width: @tablet-width) {
+      background-size: 64px 75px;
+    }
+  }
+}
+
+.fiatures__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 26px;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin-bottom: 21px;
+  }
+}
+
+.fiatures__text {
+  margin: 0;
+  padding: 0;
+}

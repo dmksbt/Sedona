@@ -1,0 +1,123 @@
+.main-nav {
+  position: relative;
+  width: auto;
+  padding-bottom: 56px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    min-height: 56px;
+  }
+}
+
+.main-nav__logo {
+  width: 102px;
+  height: 84px;
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -28px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: 97px;
+  }
+}
+
+.main-nav__image {
+  display: block;
+  width: 102px;
+  height: 84px;
+
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: 97px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  z-index: 2;
+  right: 3px;
+  bottom: 3px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  width: 23px;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 14px;
+  background-color: @blue;
+  box-shadow:
+    0 9px 0 0 @blue,
+    0 18px 0 0 @blue;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: fade(@blue, 60%);
+  box-shadow:
+    0 9px 0 0 fade(@blue, 60%),
+    0 18px 0 0 fade(@blue, 60%);
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@blue, 30%);
+  box-shadow:
+    0 9px 0 0 fade(@blue, 30%),
+    0 18px 0 0 fade(@blue, 30%);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-menu {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 3px;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 28px;
+    height: 4px;
+    position: absolute;
+    right: 10px;
+    top: 23px;
+    background-color: @white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-menu {
+  display: block;
+}

@@ -1,0 +1,89 @@
+.video-controls {
+  height: 45px;
+  background-color: fade(@black, 60%);
+
+  @media (min-width: @tablet-width) {
+    height: 93px;
+  }
+}
+
+.video-controls__scale {
+  height: 3px;
+  margin: 21px;
+  background-color: fade(@white, 20%);
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    height: 3px;
+    margin: 45px 165px 45px 93px;
+  }
+}
+
+.video-controls__handle {
+  width: 13px;
+  height: 13px;
+  border: none;
+  background-color: @white;
+  border-radius: 50%;
+  position: absolute;
+  left: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.video-controls__buttons-wrapper {
+  height: 66px;
+  padding: 0 15px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    background-color: transparent;
+  }
+}
+
+.video-controls__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &--replay {
+    margin-right: auto;
+  }
+
+  &--subtitles {
+    margin-right: 30px;
+  }
+}
+
+.video-controls__icon {
+  fill: #5c6870;
+
+  @media (min-width: @tablet-width) {
+    fill: @white;
+  }
+
+  .video-controls__button:hover & {
+    fill: #333333;
+
+    @media (min-width: @tablet-width) {
+      fill: @white;
+      fill-opacity: 0.6;
+    }
+  }
+
+  .video-controls__button:active & {
+    fill-opacity: 0.3;
+  }
+}
