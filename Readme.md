@@ -1,4 +1,4 @@
-# Проект «Седона»
+# [Проект «Седона»](https://dmksbt.github.io/Sedona/)
 
 * Верстка: [Дмитрий Кособуцкий](https://github.com/dmksbt/)
 
